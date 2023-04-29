@@ -1,3 +1,4 @@
+// For loading screen
 const Skelton = () => {
   return (
     <>
