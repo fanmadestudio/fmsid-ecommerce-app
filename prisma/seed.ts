@@ -13,7 +13,7 @@ const main = async () => {
     await primsa.category.deleteMany();
     await primsa.product.deleteMany();
     const fakeProducts = randProduct({
-      length: 1000,
+      length: 100,
     });
     for (let index = 0; index < fakeProducts.length; index++) {
       const product = fakeProducts[index];
@@ -27,7 +27,7 @@ const main = async () => {
           description: product.description,
           price: product.price,
           image: `${product.image}/tech`,
-          quantity: randNumber({ min: 10, max: 100 }),
+          quantity: randNumber({ min: 3, max: 5 }),
           category: {
             connectOrCreate: {
               where: {
